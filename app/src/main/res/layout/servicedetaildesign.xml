@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_shape2">
+
+        <ImageView
+            android:id="@+id/userImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/profilepic2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/serviceuser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="User Name"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/userImage"
+            app:layout_constraintTop_toTopOf="@id/userImage" />
+
+        <TextView
+            android:id="@+id/servicecity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="City,"
+            android:textColor="@color/pale_blue"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@id/serviceuser"
+            app:layout_constraintTop_toBottomOf="@id/serviceuser" />
+
+        <TextView
+            android:id="@+id/servicedist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="within distance"
+            android:textColor="@color/pale_blue"
+            android:textSize="10sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/servicecity"
+            app:layout_constraintStart_toEndOf="@id/servicecity" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progressIndicator"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:indicatorColor="#8A8686"
+            app:layout_constraintStart_toStartOf="@id/serviceuser"
+            app:layout_constraintTop_toBottomOf="@id/servicecity"
+            app:trackColor="#8A8686" />
+
+        <TextView
+            android:id="@+id/profileScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="7dp"
+            android:text="Profile Score -45%"
+            android:textSize="5sp"
+            app:layout_constraintStart_toEndOf="@+id/progressIndicator"
+            app:layout_constraintTop_toBottomOf="@+id/servicedist" />
+
+        <ImageView
+            android:id="@+id/callIcon"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/rounded_call_24"
+            app:layout_constraintStart_toStartOf="@id/progressIndicator"
+            app:layout_constraintTop_toBottomOf="@id/progressIndicator" />
+
+        <ImageView
+            android:id="@+id/contactIcon"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/baseline_contacts_24"
+            app:layout_constraintStart_toStartOf="@id/progressIndicator"
+            app:layout_constraintTop_toBottomOf="@id/progressIndicator" />
+
+        <TextView
+            android:id="@+id/occupation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Occupation |"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/serviceuser"
+            app:layout_constraintTop_toBottomOf="@id/callIcon" />
+
+        <TextView
+            android:id="@+id/yearsofexp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="y years of experience"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/occupation"
+            app:layout_constraintStart_toEndOf="@id/occupation" />
+
+        <TextView
+            android:id="@+id/availabilityMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:text="Hi community I am available at your service"
+            android:textSize="8sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/serviceuser"
+            app:layout_constraintTop_toBottomOf="@id/occupation" />
+
+        <TextView
+            android:id="@+id/invite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="+INVITE"
+            android:textColor="@color/deep_blue"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
